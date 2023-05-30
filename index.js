@@ -5,14 +5,14 @@ username.addEventListener("mouseover", function mouseOver() {
     if (screen.width <= 768) {
         return;
     }
-
+    
     discriminator.style.opacity = "100";
 });
 
-username.addEventListener("mouseout", function mouseOut() {
+username.addEventListener("mouseout", function mouseOut() { 
     if (screen.width <= 768) {
         return;
     }
-    
+
     discriminator.style.opacity = "0";
 });
