@@ -10,10 +10,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="./css/output.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap">
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body class="bg-black">
-        <nav class="flex flex-col md:flex-row justify-between items-center p-24 gap-4">
+        <nav class="flex flex-col md:flex-row justify-between items-center p-24 gap-4" data-aos="fade-down">
             <h1 class="text-white text-4xl font-heebo md:transition-transform md:ease-out md:hover:scale-x-105" id="username">nakamurash<span class="text-base hidden md:inline-block md:opacity-0 md:transition-all" id="discriminator">#1282</span></h1>
 
             <ul class="flex flex-row justify-center items-center gap-8">
@@ -29,7 +32,8 @@
                 </li>
             </ul>
         </nav>
-
-        <script src="./index.js"></script>
     </body>
+
+    <script src="./index.js"></script>
+    <script>AOS.init();</script>
 </html>
