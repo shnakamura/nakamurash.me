@@ -16,24 +16,32 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         
         <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body class="bg-black">
-        <div class="w-full h-full max-w-[600px] mx-auto px-4 py-8">
-            <header class="text-white text-5xl font-heebo font-bold">Desmágico</header>
+        <div class="w-full h-full max-w-[600px] mx-auto px-4 py-8" data-aos="fade-right">
+            <header>
+                <h1 class="text-white text-5xl font-heebo font-bold mb-2">Desmágico</h1>
+            </header>
     
             <nav>
                 <ol class="flex flex-row items-start justify-start gap-8">
-                    <li data-aos="fade-right">
-                        <button>
-                            <p class="text-white font-heebo hover:underline">Cadernos</p>
+                    <li>
+                        <button id="cadernosButton">
+                            <p class="text-white font-heebo transition-transform ease-out hover:underline hover:-translate-y-[4px]">Cadernos</p>
                         </button>
                     </li>
-                    <li data-aos="fade-left">
-                        <button>
-                            <p class="text-white font-heebo hover:underline">Tarefas</p>
+                    <li>
+                        <button id="linksButton">
+                            <p class="text-white font-heebo transition-transform ease-out hover:underline hover:-translate-y-[4px]">Links</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button id="tarefasButton">
+                            <p class="text-white font-heebo transition-transform ease-out hover:underline hover:-translate-y-[4px]">Tarefas</p>
                         </button>
                     </li>
                 </ol>
@@ -42,8 +50,13 @@
             <hr class="h-[2px] bg-white">
             <br>
             <p class="text-white font-heebo">Uma solução para todas as suas tarefas.</p>
+            <br>
+            <div class="transition-all ease-out opacity-0" id="cadernosList">
+                <p class="text-white font-heebo">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
     </body> 
 
     <script src="index.js"></script>
+    <script>AOS.init()</script>
 </html>
