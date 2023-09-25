@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
     <head>
-        <title>nakamurash : Home</title>
+        <title>nakamurash.me</title>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, minimum-scale=1">
+
+        <meta property="og:title" content="nakamurash.me">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://nakamurash.me/">
+        <meta property="og:description" content="Uma solução para todas as suas tarefas.">
         
-        <link rel="icon" href="./assets/fire.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="./css/output.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&display=swap">
+        
+        <link rel="stylesheet" href="css/output.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body class="bg-black">
-        <nav class="flex flex-col md:flex-row justify-between items-center p-24 gap-4" data-aos="fade-down">
-            <h1 class="text-white text-4xl font-heebo transition-transform ease-out hover:scale-x-105" id="username">nakamurash<span class="text-base transition-all md:opacity-0" id="discriminator">#1282</span></h1>
+        <div class="w-full h-full max-w-[600px] mx-auto px-4 py-8">
+            <header class="text-white text-5xl font-heebo font-bold">Desmágico</header>
+    
+            <nav>
+                <ol class="flex flex-row items-start justify-start gap-8">
+                    <li data-aos="fade-right">
+                        <button>
+                            <p class="text-white font-heebo hover:underline">Cadernos</p>
+                        </button>
+                    </li>
+                    <li data-aos="fade-left">
+                        <button>
+                            <p class="text-white font-heebo hover:underline">Tarefas</p>
+                        </button>
+                    </li>
+                </ol>
+            </nav>
 
-            <ul class="flex flex-row justify-center items-center gap-8">
-                <li> 
-                    <a href="">
-                        <h1 class="text-white text-2xl font-heebo transition-transform ease-out hover:scale-x-105">home</h1>
-                    </a>
-                </li>
-                <li> 
-                    <a href="">
-                        <h1 class="text-white text-2xl font-heebo transition-transform ease-out hover:scale-x-105">about</h1>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </body>
+            <hr class="h-[2px] bg-white">
+            <br>
+            <p class="text-white font-heebo">Uma solução para todas as suas tarefas.</p>
+        </div>
+    </body> 
 
-    <script src="./index.js"></script>
-    <script>AOS.init();</script>
+    <script src="index.js"></script>
 </html>

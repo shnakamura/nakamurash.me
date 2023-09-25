@@ -1,13 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./*{.html, .js}"],
+  content: ["*{.html, .js}"],
   theme: {
     fontFamily: {
       "heebo": "'Heebo', sans-serif"
     },
     colors: {
       "black": "#09090a",
-      "white": "#fefcff"
+      "white": "#e9e6eb",
+      "gray": "#bebbbf"
     }
   }
 }

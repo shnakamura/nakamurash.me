@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "debug": "npx tailwindcss -i ./css/styles.css -o ./css/output.css --watch"
+    "watch": "npx tailwindcss -i ./css/styles.css -o ./css/output.css --watch"
   },
   "dependencies": {
     "aos": "^2.3.4",
