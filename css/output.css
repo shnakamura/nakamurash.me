@@ -567,20 +567,12 @@ video {
   width: 100%;
 }
 
-.min-w-0 {
-  min-width: 0px;
-}
-
 .min-w-full {
   min-width: 100%;
 }
 
 .max-w-3xl {
   max-width: 48rem;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
 }
 
 .cursor-grab {
