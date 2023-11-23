@@ -1,27 +1,29 @@
-let mouseDown = false;
-let startX, scrollLeft;
+let inputDown = false;
+let startX;
+let scrollLeft;
 
 const track = document.getElementById("image-track")
 
 const onInputPress = event => {
-    mouseDown = true;
+    inputDown = true;
     startX = event.pageX - track.offsetLeft;
     scrollLeft = track.scrollLeft;
 }
 
 const onInputRelease = event => {
-    mouseDown = false;
+    inputDown = false;
 }
 
 const onInputMove = event => {
     event.preventDefault();
 
-    if (!mouseDown) { 
+    if (!inputDown) { 
         return; 
     }
     
-    const x = event.pageX - track.offsetLeft;
-    const scroll = x - startX;
+    const difference = event.pageX - track.offsetLeft;
+    const scroll = difference - startX;
+
     track.scrollLeft = scrollLeft - scroll;
 }
 
@@ -31,6 +33,6 @@ window.onmousedown = event => onInputPress(event);
 window.onmousemove = event => onInputMove(event);
 
 window.ontouchstart = event => onInputPress(event.touches[0]);
-window.ontouchmove = event => onInputMove(event.touches);
+window.ontouchmove = event => onInputMove(event.touches[0]);
 window.ontouchend = event => onInputRelease(event.touches[0]);
 window.ontouchcancel = event => onInputRelease(event.touches[0]);
