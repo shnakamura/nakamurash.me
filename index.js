@@ -1,23 +1,36 @@
-const cadernosButton = document.getElementById("cadernosButton");
-const linksButton = document.getElementById("linksButton");
-const tarefasButton = document.getElementById("tarefasButton");
+let mouseDown = false;
+let startX, scrollLeft;
 
-cadernosButton.addEventListener("click", showList);
-linksButton.addEventListener("click", showList);
-tarefasButton.addEventListener("click", showList);
+const track = document.getElementById("image-track")
 
-
-function showList() {
-    const cadernosList = document.getElementById("cadernosList");
-
-    if (cadernosList.classList.contains("opacity-0")) {
-        cadernosList.classList.remove("opacity-0");
-        cadernosList.classList.add("opacity-100");
-    }
-    else if (cadernosList.classList.contains("opacity-100")) {
-        cadernosList.classList.remove("opacity-100");
-        cadernosList.classList.add("opacity-0");
-    }
-
-
+const onInputPress = event => {
+    mouseDown = true;
+    startX = event.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
 }
+
+const onInputRelease = event => {
+    mouseDown = false;
+}
+
+const onInputMove = event => {
+    event.preventDefault();
+
+    if (!mouseDown) { 
+        return; 
+    }
+    
+    const x = event.pageX - track.offsetLeft;
+    const scroll = x - startX;
+    track.scrollLeft = scrollLeft - scroll;
+}
+
+window.onmouseleave = event => onInputRelease(event);
+window.onmouseup = event => onInputRelease(event);
+window.onmousedown = event => onInputPress(event);
+window.onmousemove = event => onInputMove(event);
+
+window.ontouchstart = event => onInputPress(event.touches[0]);
+window.ontouchmove = event => onInputMove(event.touches[0]);
+window.ontouchend = event => onInputRelease(event.touches[0]);
+window.ontouchcancel = event => onInputRelease(event.touches[0]);
