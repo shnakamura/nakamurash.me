@@ -5,6 +5,14 @@ let scrollAmount = 0;
 
 const track = document.getElementById("image-track")
 
+const moveTrackerTo = (name) => {
+    const element = document.getElementById(name);
+    const gap = 8;
+    const padding = 8;
+
+    track.scrollLeft = element.offsetLeft - padding - gap;
+}
+
 const refresh = () => {
     isInputPressed = false;
 
@@ -21,7 +29,7 @@ const onInputPress = event => {
     scrollAmount = track.scrollLeft;
 }
 
-const onInputRelease = event => {
+const onInputRelease = () => {
     isInputPressed = false;
 }
 
@@ -41,11 +49,11 @@ const onInputMove = event => {
 window.onload = refresh();
 
 window.onmouseleave = event => onInputRelease(event);
-window.onmouseup = event => onInputRelease(event);
+window.onmouseup = () => onInputRelease();
 window.onmousedown = event => onInputPress(event);
 window.onmousemove = event => onInputMove(event);
 
 window.ontouchstart = event => onInputPress(event.touches[0]);
 window.ontouchmove = event => onInputMove(event.touches[0]);
-window.ontouchend = event => onInputRelease(event.touches[0]);
+window.ontouchend = () => onInputRelease();
 window.ontouchcancel = event => onInputRelease(event.touches[0]);
