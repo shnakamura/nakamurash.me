@@ -47,5 +47,5 @@ window.onmousemove = event => onInputMove(event);
 
 window.ontouchstart = event => onInputPress(event.touches[0]);
 window.ontouchmove = event => onInputMove(event.touches[0]);
-window.ontouchend = event => onInputRelease(event.touches);
+window.ontouchend = event => onInputRelease(event.touches[0]);
 window.ontouchcancel = event => onInputRelease(event.touches[0]);
