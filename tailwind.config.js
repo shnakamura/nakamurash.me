@@ -4,11 +4,6 @@ module.exports = {
   theme: {
     fontFamily: {
       "heebo": "'Heebo', sans-serif"
-    },
-    colors: {
-      "black": "#09090a",
-      "white": "#e9e6eb",
-      "gray": "#bebbbf"
     }
   }
 }
