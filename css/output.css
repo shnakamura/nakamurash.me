@@ -839,3 +839,9 @@ video {
     line-height: 1.75rem;
   }
 }
+
+@media (orientation: landscape) {
+  .landscape\:flex-row {
+    flex-direction: row;
+  }
+}
