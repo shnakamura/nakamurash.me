@@ -21,129 +21,131 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body class="bg-black overflow-hidden">
-        <div class="flex flex-col w-full max-w-3xl h-full mx-auto gap-8 px-4 py-8" data-aos="fade-down">
-            <header class="flex flex-col items-start justify-start">
-                <h1 class="text-white text-2xl md:text-4xl font-nunito">Camiseta do Terceirão</h1>
-                <h1 class="text-gray text-base md:text-xl font-nunito">Pré-visualização</h1>
-            </header>
-
-            <div class="cursor-grab overflow-hidden flex flex-row items-start justify-start select-none scroll-smooth" id="shirt-tracker" onclick="changeStampDesign()">
-                <div class="shirt-container" id="sky-blue-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/sky-blue-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-0">
+        <div class="flex h-screen max-h-screen items-center justify-center">
+            <div class="w-full max-w-3xl mx-auto gap-8 px-4" data-aos="fade-down">
+                <header class="flex flex-col items-start justify-start">
+                    <h1 class="text-white text-2xl md:text-4xl font-nunito">Camiseta do Terceirão</h1>
+                    <h1 class="text-gray text-base md:text-xl font-nunito">Pré-visualização</h1>
+                </header>
+    
+                <div class="cursor-grab overflow-hidden flex flex-row items-start justify-start select-none scroll-smooth" id="shirt-tracker" onclick="changeStampDesign()">
+                    <div class="shirt-container" id="sky-blue-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/sky-blue-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-0">
+                    </div>
+                    <div class="shirt-container" id="offwhite-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/offwhite-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-1">
+                    </div>
+                    <div class="shirt-container" id="wine-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/wine-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-2">
+                    </div>
+                    <div class="shirt-container" id="maple-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/maple-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-3">
+                    </div>
+                    <div class="shirt-container" id="petal-pink-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/petal-pink-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-4">
+                    </div>
+                    <div class="shirt-container" id="lilac-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/lilac-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-5">
+                    </div>
+                    <div class="shirt-container" id="violet-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/violet-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-6">
+                    </div>
+                    <div class="shirt-container" id="ocean-green-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/ocean-green-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-7">
+                    </div>
+                    <div class="shirt-container" id="sea-green-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/sea-green-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-8">
+                    </div>
+                    <div class="shirt-container" id="cyan-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/cyan-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-9">
+                    </div>
+                    <div class="shirt-container" id="dark-blue-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/dark-blue-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-10">
+                    </div>
+                    <div class="shirt-container" id="lead-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/lead-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-11">
+                    </div>
+                    <div class="shirt-container" id="sand-shirt">
+                        <img class="shirt-image" draggable="false" src="assets/sand-shirt.png">
+                        <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-12">
+                    </div>
                 </div>
-                <div class="shirt-container" id="offwhite-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/offwhite-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-1">
-                </div>
-                <div class="shirt-container" id="wine-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/wine-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-2">
-                </div>
-                <div class="shirt-container" id="maple-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/maple-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-3">
-                </div>
-                <div class="shirt-container" id="petal-pink-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/petal-pink-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-4">
-                </div>
-                <div class="shirt-container" id="lilac-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/lilac-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-5">
-                </div>
-                <div class="shirt-container" id="violet-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/violet-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-6">
-                </div>
-                <div class="shirt-container" id="ocean-green-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/ocean-green-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-7">
-                </div>
-                <div class="shirt-container" id="sea-green-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/sea-green-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-8">
-                </div>
-                <div class="shirt-container" id="cyan-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/cyan-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-9">
-                </div>
-                <div class="shirt-container" id="dark-blue-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/dark-blue-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-10">
-                </div>
-                <div class="shirt-container" id="lead-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/lead-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-11">
-                </div>
-                <div class="shirt-container" id="sand-shirt">
-                    <img class="shirt-image" draggable="false" src="assets/sand-shirt.png">
-                    <img class="shirt-stamp" draggable="false" src="assets/stamp-0-black.png" id="stamp-12">
-                </div>
-            </div>
-            
-            <div class="flex flex-col items-start justify-start gap-6">
-                <div>
-                    <h1 class="text-white text-xl md:text-2xl font-nunito">Cor da Camiseta</h1>
-                    <ol class="flex flex-wrap items-start justify-start gap-2">
-                        <li>
-                            <button class="bg-sky-blue color-button" title="Azul Céu" onclick="changeShirtColor('sky-blue')" id="sky-blue-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-offwhite color-button" title="Offwhite" onclick="changeShirtColor('offwhite')" id="offwhite-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-wine color-button" title="Vinho" onclick="changeShirtColor('wine')" id="wine-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-maple color-button" title="Bordô" onclick="changeShirtColor('maple')" id="maple-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-petal-pink color-button" title="Rosa Pétala" onclick="changeShirtColor('petal-pink')" id="petal-pink-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-lilac color-button" title="Lilás" onclick="changeShirtColor('lilac')" id="lilac-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-violet color-button" title="Violeta" onclick="changeShirtColor('violet')" id="violet-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-ocean-green color-button" title="Verde Oceano" onclick="changeShirtColor('ocean-green')" id="ocean-green-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-sea-green color-button" title="Verde Água" onclick="changeShirtColor('sea-green')" id="sea-green-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-cyan color-button" title="Ciano" onclick="changeShirtColor('cyan')" id="cyan-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-dark-blue color-button" title="Azul Escuro" onclick="changeShirtColor('dark-blue')" id="dark-blue-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-lead color-button" title="Chumbo" onclick="changeShirtColor('lead')" id="lead-shirt-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-sand color-button" title="Areia" onclick="changeShirtColor('sand')" id="sand-shirt-button"></button>
-                        </li>
-                    </ol>
-
-                    <div class="bg-sky-blue w-6 h-1 mt-1 transition-all ease-out" id="shirt-color-selector"></div>
-                </div>
-                <div>
-                    <h1 class="text-white text-xl md:text-2xl font-nunito">Cor da Estampa</h1>
-                    <ol class="flex flex-wrap items-center justify-start gap-2">
-                        <li>
-                            <button class="bg-white color-button" title="Branco" onclick="changeStampColor('white')" id="white-stamp-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-black color-button outline-dashed -outline-offset-2 outline-2 outline-white" title="Preto" onclick="changeStampColor('black')" id="black-stamp-button"></button>
-                        </li>
-                        <li>
-                            <button class="bg-original color-button outline-dashed -outline-offset-2 outline-2 outline-black" title="Original" onclick="changeStampColor('original')" id="original-stamp-button"></button>
-                        </li>
-                    </ol>
-
-                    <div class="bg-white w-6 h-1 mt-1 transition-all ease-out" id="stamp-color-selector"></div>
+                
+                <div class="flex flex-col items-start justify-start gap-6">
+                    <div>
+                        <h1 class="text-white text-xl md:text-2xl font-nunito">Cor da Camiseta</h1>
+                        <ol class="flex flex-wrap items-start justify-start gap-2">
+                            <li>
+                                <button class="bg-sky-blue color-button" title="Azul Céu" onclick="changeShirtColor('sky-blue')" id="sky-blue-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-offwhite color-button" title="Offwhite" onclick="changeShirtColor('offwhite')" id="offwhite-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-wine color-button" title="Vinho" onclick="changeShirtColor('wine')" id="wine-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-maple color-button" title="Bordô" onclick="changeShirtColor('maple')" id="maple-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-petal-pink color-button" title="Rosa Pétala" onclick="changeShirtColor('petal-pink')" id="petal-pink-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-lilac color-button" title="Lilás" onclick="changeShirtColor('lilac')" id="lilac-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-violet color-button" title="Violeta" onclick="changeShirtColor('violet')" id="violet-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-ocean-green color-button" title="Verde Oceano" onclick="changeShirtColor('ocean-green')" id="ocean-green-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-sea-green color-button" title="Verde Água" onclick="changeShirtColor('sea-green')" id="sea-green-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-cyan color-button" title="Ciano" onclick="changeShirtColor('cyan')" id="cyan-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-dark-blue color-button" title="Azul Escuro" onclick="changeShirtColor('dark-blue')" id="dark-blue-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-lead color-button" title="Chumbo" onclick="changeShirtColor('lead')" id="lead-shirt-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-sand color-button" title="Areia" onclick="changeShirtColor('sand')" id="sand-shirt-button"></button>
+                            </li>
+                        </ol>
+    
+                        <div class="bg-sky-blue w-6 h-1 mt-1 transition-all ease-out" id="shirt-color-selector"></div>
+                    </div>
+                    <div>
+                        <h1 class="text-white text-xl md:text-2xl font-nunito">Cor da Estampa</h1>
+                        <ol class="flex flex-wrap items-center justify-start gap-2">
+                            <li>
+                                <button class="bg-white color-button" title="Branco" onclick="changeStampColor('white')" id="white-stamp-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-black color-button outline-dashed -outline-offset-2 outline-2 outline-white" title="Preto" onclick="changeStampColor('black')" id="black-stamp-button"></button>
+                            </li>
+                            <li>
+                                <button class="bg-original color-button outline-dashed -outline-offset-2 outline-2 outline-black" title="Original" onclick="changeStampColor('original')" id="original-stamp-button"></button>
+                            </li>
+                        </ol>
+    
+                        <div class="bg-white w-6 h-1 mt-1 transition-all ease-out" id="stamp-color-selector"></div>
+                    </div>
                 </div>
             </div>
         </div>
