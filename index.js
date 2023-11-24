@@ -35,6 +35,13 @@ const changeStampColor = color => {
 }
 
 const changeStampDesign = () => {
+    if (currentStampDesign >= 3) {
+        currentStampDesign = 0;
+    }
+    else if (currentStampDesign < 0) {
+        currentStampDesign = 0;
+    }
+    
     refreshStamps();
     refreshStampIndicator();
     
@@ -42,7 +49,7 @@ const changeStampDesign = () => {
 }
 
 const refreshStamps = () => {
-    if (currentStampDesign > 2) {
+    if (currentStampDesign >= 3) {
         currentStampDesign = 0;
     }
     else if (currentStampDesign < 0) {
