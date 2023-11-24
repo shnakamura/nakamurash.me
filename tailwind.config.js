@@ -21,7 +21,8 @@ module.exports = {
       "cyan": "#35a4bf",
       "dark-blue": "#2d3666",
       "lead": "#575c58",
-      "sand": "#c3c388"
+      "sand": "#c3c388",
+      "original": "#706873"
     }
   }
 }

@@ -1,12 +1,5 @@
 const tracker = document.getElementById("shirt-tracker");
 
-const colorNames = [
-    "black", "white", "gray", "sky-blue", "offwhite",
-    "wine", "maple", "petal-pink", "lilac", "violet",
-    "ocean-green", "sea-green", "cyan", "dark-blue",
-    "lead", "sand"
-];
-
 let currentStampDesign = 0;
 
 let currentStampColor = "white";
@@ -58,9 +51,8 @@ const refreshStamps = () => {
 
     for (let i = 0; i < 13; i++) {
         const stamp = document.getElementById(`stamp-${i}`);
-        stamp.src = `assets/${currentStampColor}-stamp-${currentStampDesign}.png`;
-
-        console.log(stamp.src)
+        
+        stamp.src = `assets/stamp-${currentStampDesign}-${currentStampColor}.png`;
     }
 }
 
@@ -87,7 +79,16 @@ const refreshShirtIndicator = () => {
 const refreshStampIndicator = () => {
     const selector = document.getElementById("stamp-color-selector");
     const button = document.getElementById(`${currentStampColor}-stamp-button`);
-    
+    selector.classList.remove(`bg-${previousStampColor}`);
+    selector.classList.add(`bg-${currentStampColor}`);
+
+    if (currentStampColor === "black") {
+        selector.classList.add("outline-dashed", "-outline-offset-2", "outline-2", "outline-white");
+    }
+    else {
+        selector.classList.remove("outline-dashed", "-outline-offset-2", "outline-2", "outline-white");
+    }
+
     const buttonLeft = button.offsetLeft;
     const buttonTop = button.offsetTop;
     const buttonHeight = button.offsetHeight + 4;
@@ -111,6 +112,8 @@ const refreshPage = () => {
     previousStampColor = currentStampColor;
 
     currentStampDesign = 0;
+
+    changeShirtColor(currentShirtColor);
 
     refreshStamps();
 
