@@ -10,35 +10,25 @@
         <meta property="og:title" content="nakamurash.me">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://nakamurash.me/">
-  
-        <meta http-equiv="refresh" content="index.html">
-
-        <link rel="preload" href="assets/img/black-stamp-0.png" as="image">
-        <link rel="preload" href="assets/img/black-stamp-1.png" as="image">
-        <link rel="preload" href="assets/img/black-stamp-2.png" as="image">
-
-        <link rel="preload" href="assets/img/white-stamp-0.png" as="image">
-        <link rel="preload" href="assets/img/white-stamp-1.png" as="image">
-        <link rel="preload" href="assets/img/white-stamp-2.png" as="image">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         
         <link rel="stylesheet" href="css/output.css">
-        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" >
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap">
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </head>
     <body class="bg-black overflow-hidden">
         <div class="flex flex-col w-full max-w-3xl h-full mx-auto gap-8 px-4 py-8" data-aos="fade-down">
             <header class="flex flex-col items-start justify-start">
-                <h1 class="text-white text-2xl md:text-4xl font-heebo">Camiseta do Terceirão</h1>
-                <h1 class="text-gray text-base md:text-xl font-heebo">Pré-visualização</h1>
+                <h1 class="text-white text-2xl md:text-4xl font-nunito">Camiseta do Terceirão</h1>
+                <h1 class="text-gray text-base md:text-xl font-nunito">Pré-visualização</h1>
             </header>
 
             <div class="cursor-grab overflow-hidden flex flex-row items-start justify-start select-none scroll-smooth" id="shirt-tracker" onclick="changeStampDesign()">
-                <div class="shirt-container" id="skyblue-shirt">
+                <div class="shirt-container" id="sky-blue-shirt">
                     <img class="shirt-image" draggable="false" src="assets/img/sky-blue-shirt.png">
                     <img class="shirt-stamp" draggable="false" src="assets/img/black-stamp-0.png" id="stamp-0">
                 </div>
@@ -92,61 +82,65 @@
                 </div>
             </div>
             
-            <div class="flex flex-col items-start justify-start gap-8">
+            <div class="flex flex-col items-start justify-start gap-6">
                 <div>
-                    <h1 class="text-white text-xl md:text-2xl font-heebo">Cor da Camiseta</h1>
+                    <h1 class="text-white text-xl md:text-2xl font-nunito">Cor da Camiseta</h1>
                     <ol class="flex flex-wrap items-start justify-start gap-2">
                         <li>
-                            <button class="bg-sky-blue color-button" onclick="moveTrackerTo('skyblue-shirt')"></button>
+                            <button class="bg-sky-blue color-button" onclick="changeShirtColor('sky-blue')" id="sky-blue-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-offwhite color-button" onclick="moveTrackerTo('offwhite-shirt')"></button>
+                            <button class="bg-offwhite color-button" onclick="changeShirtColor('offwhite')" id="offwhite-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-wine color-button" onclick="moveTrackerTo('wine-shirt')"></button>
+                            <button class="bg-wine color-button" onclick="changeShirtColor('wine')" id="wine-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-maple color-button" onclick="moveTrackerTo('maple-shirt')"></button>
+                            <button class="bg-maple color-button" onclick="changeShirtColor('maple')" id="maple-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-petal-pink color-button" onclick="moveTrackerTo('petal-pink-shirt')"></button>
+                            <button class="bg-petal-pink color-button" onclick="changeShirtColor('petal-pink')" id="petal-pink-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-lilac color-button" onclick="moveTrackerTo('lilac-shirt')"></button>
+                            <button class="bg-lilac color-button" onclick="changeShirtColor('lilac')" id="lilac-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-violet color-button" onclick="moveTrackerTo('violet-shirt')"></button>
+                            <button class="bg-violet color-button" onclick="changeShirtColor('violet')" id="violet-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-ocean-green color-button" onclick="moveTrackerTo('ocean-green-shirt')"></button>
+                            <button class="bg-ocean-green color-button" onclick="changeShirtColor('ocean-green')" id="ocean-green-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-sea-green color-button" onclick="moveTrackerTo('sea-green-shirt')"></button>
+                            <button class="bg-sea-green color-button" onclick="changeShirtColor('sea-green')" id="sea-green-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-cyan color-button" onclick="moveTrackerTo('cyan-shirt')"></button>
+                            <button class="bg-cyan color-button" onclick="changeShirtColor('cyan')" id="cyan-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-dark-blue color-button" onclick="moveTrackerTo('dark-blue-shirt')"></button>
+                            <button class="bg-dark-blue color-button" onclick="changeShirtColor('dark-blue')" id="dark-blue-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-lead color-button" onclick="moveTrackerTo('lead-shirt')"></button>
+                            <button class="bg-lead color-button" onclick="changeShirtColor('lead')" id="lead-shirt-button"></button>
                         </li>
                         <li>
-                            <button class="bg-sand color-button" onclick="moveTrackerTo('sand-shirt')"></button>
+                            <button class="bg-sand color-button" onclick="changeShirtColor('sand')" id="sand-shirt-button"></button>
                         </li>
                     </ol>
+
+                    <div class="bg-sky-blue w-6 h-1 mt-1 transition-all ease-out" id="shirt-color-selector"></div>
                 </div>
                 <div>
-                    <h1 class="text-white text-xl md:text-2xl font-heebo">Cor da Estampa</h1>
+                    <h1 class="text-white text-xl md:text-2xl font-nunito">Cor da Estampa</h1>
                     <ol class="flex flex-wrap items-center justify-start gap-2">
                         <li>
-                            <button class="bg-white color-button" onclick="changeStampColor('white')"></button>
+                            <button class="bg-white color-button" onclick="changeStampColor('white')" id="white-stamp-button"></button>
                         </li>
                         <li>
-                            <button class="bg-black color-button outline-dashed -outline-offset-2 outline-2 outline-white" onclick="changeStampColor('black')"></button>
+                            <button class="bg-black color-button outline-dashed -outline-offset-2 outline-2 outline-white" onclick="changeStampColor('black')" id="black-stamp-button"></button>
                         </li>
                     </ol>
+
+                    <div class="bg-white w-6 h-1 mt-1 transition-all ease-out" id="stamp-color-selector"></div>
                 </div>
             </div>
         </div>
