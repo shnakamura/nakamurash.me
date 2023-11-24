@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -191,10 +191,6 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
-  font-feature-settings: inherit;
-  /* 1 */
-  font-variation-settings: inherit;
-  /* 1 */
   font-size: 100%;
   /* 1 */
   font-weight: inherit;
@@ -342,14 +338,6 @@ ul,
 menu {
   list-style: none;
   margin: 0;
-  padding: 0;
-}
-
-/*
-Reset default styling for dialogs.
-*/
-
-dialog {
   padding: 0;
 }
 
@@ -555,14 +543,6 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.max-h-screen {
-  max-height: 100vh;
-}
-
 .w-6 {
   width: 1.5rem;
 }
@@ -609,10 +589,6 @@ video {
   justify-content: flex-start;
 }
 
-.justify-center {
-  justify-content: center;
-}
-
 .gap-2 {
   gap: 0.5rem;
 }
@@ -627,6 +603,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .scroll-smooth {
@@ -646,11 +626,6 @@ video {
 .bg-dark-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(45 54 102 / var(--tw-bg-opacity));
-}
-
-.bg-gray {
-  --tw-bg-opacity: 1;
-  background-color: rgb(190 187 191 / var(--tw-bg-opacity));
 }
 
 .bg-lead {
@@ -676,6 +651,11 @@ video {
 .bg-offwhite {
   --tw-bg-opacity: 1;
   background-color: rgb(230 228 220 / var(--tw-bg-opacity));
+}
+
+.bg-original {
+  --tw-bg-opacity: 1;
+  background-color: rgb(112 104 115 / var(--tw-bg-opacity));
 }
 
 .bg-petal-pink {
@@ -711,11 +691,6 @@ video {
 .bg-wine {
   --tw-bg-opacity: 1;
   background-color: rgb(145 18 26 / var(--tw-bg-opacity));
-}
-
-.bg-original {
-  --tw-bg-opacity: 1;
-  background-color: rgb(112 104 115 / var(--tw-bg-opacity));
 }
 
 .px-4 {
@@ -787,6 +762,10 @@ video {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
 .shirt-container {
   position: relative;
   min-width: 100%;
@@ -849,11 +828,5 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (orientation: landscape) {
-  .landscape\:flex-row {
-    flex-direction: row;
   }
 }

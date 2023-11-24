@@ -28,27 +28,21 @@ const changeStampColor = color => {
 }
 
 const changeStampDesign = () => {
+    currentStampDesign++;
+
     if (currentStampDesign >= 3) {
-        currentStampDesign = 0;
-    }
-    else if (currentStampDesign < 0) {
         currentStampDesign = 0;
     }
 
     refreshStamps();
     refreshStampIndicator();
-    
-    currentStampDesign++;
 }
 
 const refreshStamps = () => {
     if (currentStampDesign >= 3) {
         currentStampDesign = 0;
     }
-    else if (currentStampDesign < 0) {
-        currentStampDesign = 0;
-    }
-
+    
     for (let i = 0; i < 13; i++) {
         const stamp = document.getElementById(`stamp-${i}`);
         
@@ -103,8 +97,6 @@ const refreshStampIndicator = () => {
 }
 
 const refreshPage = () => {
-    isInputPressed = false;
-
     currentShirtColor = "sky-blue";
     previousShirtColor = currentShirtColor;
 
@@ -116,7 +108,7 @@ const refreshPage = () => {
     changeShirtColor(currentShirtColor);
 
     refreshStamps();
-
+    
     refreshShirtIndicator();
     refreshStampIndicator();
 }
