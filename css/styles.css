@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind utilities;
 @tailwind components;
+
+@layer components {
+    .shirt-container {
+        @apply relative min-w-full transition-transform ease-out hover:scale-105;
+    }
+
+    .shirt-image {
+        @apply object-cover object-center;
+    }
+
+    .shirt-stamp {
+        @apply absolute top-0 left-0 object-cover object-center;
+    }
+
+    .color-button {
+        @apply w-6 h-6 rounded-xl transition-transform ease-out hover:scale-105;
+    }
+}
