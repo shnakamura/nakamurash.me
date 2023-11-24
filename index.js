@@ -50,8 +50,6 @@ const refreshPage = () => {
     tracker.scrollLeft = scrollAmount;
 
     refreshStamps();
-
-    AOS.init();
 }
 
 window.onload = refreshPage();
