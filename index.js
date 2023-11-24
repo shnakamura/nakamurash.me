@@ -7,7 +7,8 @@ const colorNames = [
     "lead", "sand"
 ];
 
-let currentStamp = 0;
+let currentStampDesign = 0;
+let currentStampColor = "white";
 
 const moveTrackerTo = (name) => {
     const element = document.getElementById(name);
@@ -17,27 +18,40 @@ const moveTrackerTo = (name) => {
     tracker.scrollLeft = element.offsetLeft - padding - gap;
 }
 
-const changeStamp = () => {
-    if (currentStamp >= 3) {
-        currentStamp = 0;
-    }
+const changeStampColor = color => {
+    currentStampColor = color;
 
-    for (let i = 0; i < 13; i++) {
-        const stamp = document.getElementById(`stamp-${i}`);
-
-        stamp.src = `assets/img/black-stamp-${currentStamp}.png`;
-    }
-
-    currentStamp++;
+    refreshStamps();
 }
 
-const refresh = () => {
+const changeStampDesign = () => {
+    if (currentStampDesign >= 3) {
+        currentStampDesign = 0;
+    }
+
+    refreshStamps();
+    
+    currentStampDesign++;
+}
+
+const refreshStamps = () => {
+    for (let i = 0; i < 13; i++) {
+        const stamp = document.getElementById(`stamp-${i}`);
+        stamp.src = `assets/img/${currentStampColor}-stamp-${currentStampDesign}.png`;
+    }
+}
+
+const refreshPage = () => {
     isInputPressed = false;
 
     scrollStart = 0;
     scrollAmount = 0;
 
     tracker.scrollLeft = scrollAmount;
+
+    refreshStamps();
+
+    AOS.init();
 }
 
-window.onload = refresh();
+window.onload = refreshPage();
