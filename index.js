@@ -41,7 +41,7 @@ const changeStampDesign = () => {
     else if (currentStampDesign < 0) {
         currentStampDesign = 0;
     }
-    
+
     refreshStamps();
     refreshStampIndicator();
     
@@ -58,7 +58,7 @@ const refreshStamps = () => {
 
     for (let i = 0; i < 13; i++) {
         const stamp = document.getElementById(`stamp-${i}`);
-        stamp.src = `assets/img/${currentStampColor}-stamp-${currentStampDesign}.png`;
+        stamp.src = `assets/${currentStampColor}-stamp-${currentStampDesign}.png`;
 
         console.log(stamp.src)
     }
